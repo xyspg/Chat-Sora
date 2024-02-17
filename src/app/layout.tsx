@@ -7,6 +7,7 @@ import { Providers } from '@/app/providers'
 
 import '@/styles/tailwind.css'
 import {Analytics} from "@vercel/analytics/react";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,9 +44,11 @@ export default function RootLayout({
       className={clsx('h-full antialiased', inter.variable, monaSans.variable)}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
-        <Providers>{children}<Analytics /></Providers>
-      </body>
+    <Script async src="https://analytics.xyspg.moe/script.js"
+            data-website-id="1a08ac76-8a3d-41dc-a566-57e50dff82fb" data-domains="chat-sora.com" />
+    <body className="flex min-h-full flex-col bg-white dark:bg-gray-950">
+    <Providers>{children}<Analytics/></Providers>
+    </body>
     </html>
   )
 }
