@@ -1,6 +1,6 @@
-# Commit
+# Chat Sora
 
-Commit is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+Chat Sora is a Sora wrapper with waitlist. 
 
 ## Getting started
 
@@ -11,6 +11,7 @@ npm install
 ```
 
 Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` environment variable to your site's public URL:
+Plus the database credentials. 
 
 ```
 NEXT_PUBLIC_SITE_URL=https://example.com
