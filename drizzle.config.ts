@@ -3,8 +3,8 @@ import type { Config } from 'drizzle-kit'
 dotenv.config()
 
 export default {
-  driver: 'mysql2',
+  driver: 'pg',
   schema: './db/schema.ts',
   out: './db/migrations',
-  dbCredentials: { uri: process.env.DATABASE_URL || '' },
+  dbCredentials: { connectionString: process.env.DRIZZLE_DATABASE_URL || '' },
 } satisfies Config

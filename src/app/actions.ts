@@ -48,6 +48,7 @@ export const joinWaitlist = async (formdata: FormData) => {
       }
     }
   }
+  // @ts-ignore
   await db.insert(soraWaitlist).values({
     email, ua, ip
   })
